@@ -8,5 +8,11 @@ namespace :greeting do
   task :hola do
     puts "hola de Rake!"
   end
+end
 
+namespace :db do
+  desc 'give access to environment file'
+  task :environment do
+    require_relative './config/environment'
+  end
 end
